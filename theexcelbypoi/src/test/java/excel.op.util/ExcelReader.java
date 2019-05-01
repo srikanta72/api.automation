@@ -1,5 +1,6 @@
 package excel.op.util;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -15,6 +16,7 @@ import java.util.List;
 public class ExcelReader {
     private Workbook workbook;
     private Sheet currentSheet;
+    private String expectedCCellValue;
 
     public ExcelReader(String excelFilePath) {
         try(FileInputStream excelFile = new FileInputStream(new File(excelFilePath))){
@@ -53,7 +55,18 @@ public class ExcelReader {
         headerRow.forEach(cell -> headers.add(cell.toString()));
         return headers;
     }
-
-
+    public String getCellValueByCurrentRowIndexAndHeaderName(int rowIndex, String headerName){
+        return getCellValueByCurrentRowIndexAndHeaderName(rowIndex, 0, headerName);
+    }
+    public String getCellValueByCurrentRowIndexAndHeaderName(int rowIndex, int headerRowIndex, String headerName){
+        Row headerRow=currentSheet.getRow(headerRowIndex);
+        Row currentReadingRow= currentSheet.getRow(rowIndex);
+        headerRow.forEach(cell -> {
+            if(headerName.equals(cell.toString().trim())){
+                expectedCCellValue=currentReadingRow.getCell(cell.getColumnIndex()).toString().trim();
+            }
+        });
+        return expectedCCellValue;
+    }
 
 }
