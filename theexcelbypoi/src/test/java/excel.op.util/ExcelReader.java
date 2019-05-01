@@ -50,9 +50,7 @@ public class ExcelReader {
     public List<String> getCellValuesByRowIndex(int rowIndex){
         Row headerRow=currentSheet.getRow(rowIndex);
         List<String> headers= new ArrayList<>();
-        headerRow.forEach(cell -> {
-            headers.add(cell.toString());
-        });
+        headerRow.forEach(cell -> headers.add(cell.toString()));
         return headers;
     }
 
