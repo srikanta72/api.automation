@@ -1,0 +1,191 @@
+	@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:3:OrderDAP:DooFu1:0:ATT1:_ATTp:ATTt1::db']/table/tbody/tr/td[8]/div/table/tbody/tr/td[9]/span/a")
+		WebElement purchangeNo;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:3:OrderDAP:sdi2::disAcr']")
+		WebElement fulfilmentLines;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:4:ProDAP:SPb']/a/span")
+		WebElement fulfilLineDoneBtn;
+		//*[@id="pt1:_FOr1:1:_FONSr2:0:_FOTsr1:4:ProDAP:SPb"]/a/span
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:3:OrderDAP:SPb']/a/span")
+		WebElement doneBtn;
+		@FindBy(how=How.XPATH,using="//span[text()='Scheduled']")
+		WebElement orderStatus;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:APVIEW1:SPb']/a/span")
+		WebElement orderDoneBtn;
+		
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_UIShome::icon']")
+		WebElement homeBtn;
+		@FindBy(how=How.XPATH,using="//a[text()='Inventory Management']")
+		WebElement inventoryMngmntBtn;
+		@FindBy(how=How.XPATH,using="//img[@alt='Tasks']")
+		WebElement taskBtn;
+		@FindBy(how=How.XPATH,using="//a[text()='Manage Item Quantities']")
+		WebElement mngItemQntyLink;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTRaT:0:soc1::content']")
+		WebElement showTaskDD;
+		@FindBy(how=How.XPATH,using="//a[text()='Manage Shipment Lines']")
+		WebElement mngShipmntLinesLink;
+		@FindBy(how=How.XPATH,using="//button[text()='Change Organization']")
+		WebElement changeOrgBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:2:orgCode2Id::lovIconId']")
+		WebElement orgDD;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:2:orgCodeId::dropdownPopup::popupsearch']")
+		WebElement searchOrgDD;
+		@FindBy(how=How.XPATH,using="//span[text()='Chicago']")
+		WebElement selectedOrg;
+		@FindBy(how=How.XPATH,using="//button[@accesskey='K']")
+		WebElement changeOrgokBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:3:pt1:AP1:q1:value00::content']")
+		WebElement ordrNoInput;
+		@FindBy(how=How.XPATH,using="//button[text()='Search']")
+		WebElement shipmentLineSearchbtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:3:pt1:AP1:q1::search']")
+		WebElement shipmentLineSearchBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:4:pt1:ap1:commandToolbarButton2']/a/span")
+		WebElement autoCreateShipment;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:4:pt1:ap1:commandLink5']")
+		WebElement shipMentNo;
+		@FindBy(how=How.XPATH,using="	//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:4:pt1:ap1:ctb1::popEl']")
+		WebElement shipmentPageActionDD;
+		@FindBy(how=How.XPATH,using="//td[text()='Pick Release']")
+		WebElement pickReleaseLink;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:4:pt1:ap1:WSHsv2::popEl']")
+		WebElement saveAndCloseDD;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:4:pt1:ap1:commandMenuItem3']/td[2]")
+		WebElement saveAndCloseBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:3:pt1:AP1:r12345:0:scat1:_ATp:table1::db']/table/tbody/tr/td[3]/span/a")
+		WebElement shipmentNoLink;
+		@FindBy(how=How.XPATH,using="//span[text()='Staged']")
+		WebElement ordrLineStatus;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:5:pt1:scap1:EditD1:0:scat1:_ATp:table1::db']/table/tbody/tr/td[3]/div/table/tbody/tr[1]/td[5]/span")
+		WebElement rqstedQnty;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:MAnt2:5:pt1:scap1:EditD1:0:scat1:_ATp:table1::db']/table/tbody/tr/td[3]/div/table/tbody/tr[1]/td[6]/span/span/input")
+		WebElement shippedQnty;
+		@FindBy(how=How.XPATH,using="//span[text()='Ship Confirm']")
+		WebElement shipConfrmBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:AP1:qq1:it1::content']")
+		WebElement searchOrder;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:AP1:qq1::search_icon']")
+		WebElement searchSOurceOrderBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:1:APVIEW1:pc1:ATt1::db']/table/tbody/tr/td[2]/div/table/tbody/tr/td[2]/span")
+		WebElement orderLineStats;
+		@FindBy(how=How.XPATH,using="//a[text()='Tools']")
+		WebElement toolsLink;
+		@FindBy(how=How.XPATH,using="//a[text()='Scheduled Processes']")
+		WebElement scheduledProcesslink;
+		@FindBy(how=How.XPATH,using="//a[@title='Expand Search']")
+		WebElement expandSearchBtn;
+		@FindBy(how=How.XPATH,using="//span[text()='Schedule New Process']")
+		WebElement scheduleNewProcessLink;
+		@FindBy(how=How.XPATH,using="//a[@title='Search: Name']")
+		WebElement scheduleNewProcessDD;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:selectOneChoice2::_afrLovInternalQueryId:value00::content']")
+		WebElement inputScheduleProcessName;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:selectOneChoice2_afrLovInternalTableId::db']/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]/span")
+		WebElement selectedInvoice;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:1:APVIEW1:SPb']/a/span")
+		WebElement shipmentDonebtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:selectOneChoice2::_afrLovInternalQueryId::search']")
+		WebElement srchNdSelectNameBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:selectOneChoice2::lovDialogId::ok']")
+		WebElement selectedSearchAndNameOk1;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:snpokbtnid']")
+		WebElement selectedSearchAndNameOk2;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:r1:0:r1:basicReqBody:paramDynForm_ATTRIBUTE4_ATTRIBUTE4::lovIconId']")
+		WebElement transactnDD;
+		
+		@FindBy(how=How.XPATH,using="//span[text()='Distributed Order Orchestration']")
+		WebElement selectedTransactionSourceDD;
+		
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:r1:0:r1:requestBtns:submitButton']/a/span")
+		WebElement submitBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:r1:0:r1:requestBtns:confirmationPopup:confirmSubmitDialog::ok']")
+		WebElement confrmtnOkBtn;
+		@FindBy(how=How.XPATH,using="//img[@alt='Refresh']")
+		WebElement imgrefreshBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='clusters-left-nav']")
+		WebElement scrollBackBtn;
+		@FindBy(how=How.XPATH,using="//span[text()='Closed']")
+		WebElement ordrlineStatus;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:1:APVIEW1:m1']/div/table/tbody/tr/td[3]/div")
+		WebElement closedStatusActnBtn;
+		@FindBy(how=How.XPATH,using="//td[text()='Switch to Fulfillment View']")
+		WebElement switchToFulfilmntBtn;
+		
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:3:OrderDAP:DooFu1:0:ATT1:_ATTp:ATTt1::scroller']")
+		WebElement el1;
+		
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:OrderDAP:sdi2::disAcr']")
+		WebElement fulfilmentBtn;
+		
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:OrderDAP:DooFu1:0:ATT1:_ATTp:ATTm']/div/table/tbody/tr/td[3]/div")
+		WebElement fulfilmentLineactionDD;
+		@FindBy(how=How.XPATH,using="//td[text()='View Fulfillment Details']")
+		WebElement fulfilmentLineactionDDSelected;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:OrderDAP:DooFu1:0:ATT1:cb1']")
+		WebElement fulfilmentLineDoneBtn;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:OrderDAP:DooFu1:0:ATT1:DooSh1:1:AT4:_ATp:table5']")
+		WebElement HighLightedElement;
+		@FindBy(how=How.XPATH,using="//a[text()='Billing'][@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:2:OrderDAP:DooFu1:0:ATT1:DooSh1:1:sdi4::disAcr']")
+		WebElement billingLink;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:4:ProDAP:DooOr1:0:projectGantt1:dtt::db']/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[3]/span")
+		WebElement awaitingShippingElement;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:panel:result:0:j_id__ctru141pc4']")
+		WebElement sendShipmentAdvice;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:panel:result:1:j_id__ctru141pc4']")
+		WebElement attchshipmentDcmntShomnt;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:panel:result:2:j_id__ctru141pc4']")
+		WebElement shpmntConfrmDcmnt;
+		@FindBy(how=How.XPATH,using="//*[@id='pt1:_FOr1:1:_FONSr2:0:_FOTsr1:0:pt1:panel:result:3:j_id__ctru141pc4']")
+		WebElement printBillOfLaddingReport;
+
+
+
+
+	/*
+				itemNameSrchInput.sendKeys(sh3.getRow(0).getCell(1).getStringCellValue());
+				wait.until(ExpectedConditions.elementToBeClickable(itemsearchBtn));
+		 		itemsearchBtn.click();
+				Thread.sleep(3000);
+				selectedItem.click();
+				wait.until(ExpectedConditions.elementToBeClickable(okayBtn));
+				okayBtn.click();
+				Thread.sleep(7000);
+				itemQntyBtn.clear();
+				Cell itemqnty = sh3.getRow(4).getCell(1);
+				itemqnty.setCellType ( Cell.CELL_TYPE_STRING );
+			    String itmQnt = itemqnty.getStringCellValue();
+				itemQntyBtn.sendKeys(itmQnt);
+				addBtn.click();
+				wait.until(ExpectedConditions.elementToBeClickable(shipmentbtn));
+				shipmentbtn.click();
+				Thread.sleep(3000);
+				supplyBtn.click();
+				Thread.sleep(3000);
+				wareHouseSearchBtn.sendKeys(sh3.getRow(2).getCell(1).getStringCellValue());
+				Thread.sleep(4000);
+				selectedWareHouseSearchBtn.click();
+				Thread.sleep(3000);
+				
+				//Billing And Pament Details Page
+				
+				billingAndPaymentDetailsBtn.click();
+				Thread.sleep(3000);
+				submitButton.click();
+				Thread.sleep(3000);
+				wait.until(ExpectedConditions.elementToBeClickable(alertokBtn));
+				Thread.sleep(3000);
+				alertokBtn.click();
+				Thread.sleep(7000);
+				refreshBtn.click();
+				Thread.sleep(3000);
+				actionsDD.click();
+				Thread.sleep(5000);
+				selectedAction.click();
+				Thread.sleep(3000);
+				generatedSourceOrder=sourceOrder.getText();
+				System.out.println("Generated Source Order No :" + generatedSourceOrder);
+				Thread.sleep(3000);
+				
+				*/
+				
+				
