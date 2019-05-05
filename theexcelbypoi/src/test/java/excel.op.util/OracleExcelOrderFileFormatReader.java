@@ -8,9 +8,8 @@ import java.util.List;
 
 public class OracleExcelOrderFileFormatReader {
     private ExcelReader excelReader;
-    private List<String> completeRowCellList= new ArrayList<>();
-    private List<String> previousRowCellList= new ArrayList<>();
     private List<String> currentRowCellList= new ArrayList<>();
+    private List<List<String>> singleOrderWithAllItems= new ArrayList<>();
     private int headerCellCount;
 
     public void readOracleOrderExcelFile(String filePath, int sheetIndex){
@@ -25,17 +24,22 @@ public class OracleExcelOrderFileFormatReader {
 
     private void processCurrentRow(ExcelReader excelReader, Sheet sheet, Row row, int rowIndex){
         currentRowCellList= excelReader.getCellValuesByRowIndex(rowIndex);
-        if(headerCellCount!=currentRowCellList.size()){
-            for(int countGap=0; countGap<(headerCellCount-currentRowCellList.size()); countGap++){
-                currentRowCellList.add(countGap, completeRowCellList.get(countGap));
-            }
-            System.out.println("Updated :currentRowCellList: "+currentRowCellList);
-            previousRowCellList=currentRowCellList;
+        if(headerCellCount>currentRowCellList.size()){
+            singleOrderWithAllItems.add(currentRowCellList);
+//            System.out.println("Updated :currentRowCellList: "+singleOrderWithAllItems);
+        }else if(headerCellCount==currentRowCellList.size()){
+            System.out.println("Updated :currentRowCellList: "+singleOrderWithAllItems);
+            executeSingleOrderWithItems(singleOrderWithAllItems);
+            singleOrderWithAllItems=new ArrayList<>();
+//            System.out.println("Regular :completeRowCellList: " + currentRowCellList);
+            singleOrderWithAllItems.add(currentRowCellList);
         }else{
-            System.out.println("Regular :completeRowCellList: " + currentRowCellList);
-            completeRowCellList = currentRowCellList;
+            System.out.println("Excel data is mismatching with header: " + currentRowCellList);
         }
-        previousRowCellList=currentRowCellList;
+//        System.out.println("Updated :currentRowCellList: "+singleOrderWithAllItems);
+    }
 
+    public void executeSingleOrderWithItems(List<List<String>> singleOrderWithAllSubItems){
+        //execute your order
     }
 }
